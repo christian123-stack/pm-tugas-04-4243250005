@@ -15,6 +15,7 @@ mendapat potongan 50% dari total biaya.
 
 ```mermaid
 classDiagram
+  direction LR
   class Kendaraan {
     <<abstract>>
     +String plat
@@ -23,10 +24,19 @@ classDiagram
     +int tarifPerJam
     +biaya(DateTime keluar) int
   }
-  class Motor
-  class Mobil
-  class Truk
-  class MobilBerlangganan
+  class Motor {
+    +int tarifPerJam
+  }
+  class Mobil {
+    +int tarifPerJam
+  }
+  class Truk {
+    +int tarifPerJam
+  }
+  class MobilBerlangganan {
+    +String jenis
+    +biaya(DateTime keluar) int
+  }
   class Berlangganan {
     <<mixin>>
     +biaya(DateTime keluar) int
@@ -37,8 +47,13 @@ classDiagram
     -int _pendapatan
     +int sisa
     +int pendapatan
+    +Stream~String~ kejadian
     +masuk(Kendaraan) Future
     +keluar(String, DateTime) Future
+  }
+  class ParkirPenuh {
+    <<exception>>
+    +int kapasitas
   }
   Kendaraan <|-- Motor
   Kendaraan <|-- Mobil
@@ -46,6 +61,7 @@ classDiagram
   Mobil <|-- MobilBerlangganan
   MobilBerlangganan ..> Berlangganan : with
   Parkiran o-- Kendaraan
+  Parkiran ..> ParkirPenuh : throws
 ```
 
 ## Menjalankan dan memeriksa
