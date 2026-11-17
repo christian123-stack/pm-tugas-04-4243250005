@@ -81,9 +81,8 @@ urutannya di terminal.
 
 ## Bukti tangkapan layar
 
-Jalankan `dart run bin/main.dart` dan ambil tangkapan layar terminal yang
-memperlihatkan kendaraan masuk, penolakan saat penuh, kendaraan keluar, serta
-total pendapatan. Simpan sebagai `screenshots/simulasi-parkir.png`.
+Tangkapan layar menunjukkan tiga kendaraan masuk, kendaraan keempat ditolak
+karena kapasitas penuh, transaksi keluar, dan total pendapatan Rp28.500.
 
 ![Simulasi sistem parkir](screenshots/simulasi-parkir.png)
 
@@ -92,7 +91,3 @@ total pendapatan. Simpan sebagai `screenshots/simulasi-parkir.png`.
 AI digunakan sebagai bantuan untuk menyusun implementasi, tes, dan draf README.
 Program diperiksa dengan `dart analyze` dan `dart test`.
 
-## Pengumpulan
-
-Buat repository GitHub publik bernama `pm-tugas-04-4243250005`, pastikan
-memiliki sedikitnya tiga commit, lalu kirim tautannya melalui LMS UNIMED.
