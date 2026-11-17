@@ -1,0 +1,11 @@
+name: pm_tugas_04_4243250005
+description: Sistem parkir kampus console untuk Tugas Rutin 4.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dev_dependencies:
+  lints: ^5.1.1
+  test: ^1.25.8
